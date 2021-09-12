@@ -1,0 +1,49 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+
+  <main style="width: 99vw; height: 98vh" class="main-class">
+    <route default>
+      <div
+        style="display: flex; align-items: center; justify-content: center; width: 55%; height: 100%; gap: 50px; flex-direction: column;margin-left: auto;margin-right: auto;">
+        <div style="width: 100%">
+          <application name="@exalt/angular-first-app"></application>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 100%; gap: 50px">
+          <application name="@exalt/react-first-app"></application>
+          <application name="@exalt/react-second-app"></application>
+        </div>
+      </div>
+    </route>
+    <route path="admin">
+      <div
+        style="display: flex; align-items: center; justify-content: center; width: 55%; height: 100%; gap: 50px; flex-direction: column;margin-left: auto;margin-right: auto;">
+        <div style="width: 100%">
+          <application name="@exalt/angular-first-app"></application>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 100%; gap: 50px">
+          <application name="@exalt/react-first-app"></application>
+          <application name="@exalt/react-second-app"></application>
+        </div>
+      </div>
+    </route>
+    <route path="welcome">
+      <application name="@single-spa/welcome"></application>
+    </route>
+  </main>
+</single-spa-router>

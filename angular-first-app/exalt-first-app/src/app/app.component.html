@@ -1,0 +1,16 @@
+<div *ngIf="!isAdmin else admin" class="alert alert-primary"
+     [ngClass]="{'alert-success': !!car}"
+     role="alert">
+  <span *ngIf="!car; else carContainer">No car was selected for rental</span>
+  <ng-template #carContainer>
+    <h4>{{car.name}}</h4>
+  </ng-template>
+</div>
+
+<ng-template #admin>
+  <div class="alert alert-primary d-flex justify-content-center align-items-center" role="alert">
+    <h4> Welcome Admin</h4>
+    <button type="button" class="btn btn-primary mb-1 ml-auto" (click)="addCar()">Add Car</button>
+  </div>
+</ng-template>
+<router-outlet></router-outlet>
